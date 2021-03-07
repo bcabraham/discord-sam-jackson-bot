@@ -13,7 +13,7 @@ def replace_all(text, dic):
 
 
 def get_help_message() -> str:
-    msg = "> Motherfucker, here's some motherfuckin help:\n> \n"
+    msg = "> Look, motherfucker, here's some motherfuckin help:\n> \n"
     msg += "> Use this\tTo motherfucking get this\n> "
     msg += "> ".join([f"{key}:\t\t{value}\n" for key, value in repl_dict.items()])
 
