@@ -23,4 +23,4 @@
     - [ ] Terraform/Cloudformation
 
 ## See It in Action
-![mf-bot](https://github.com/bcabraham/discord-sam-jackson-bot/blob/main/resources/ezgif.com-gif-maker.gif =942x300)
+![mf-bot](https://github.com/bcabraham/discord-sam-jackson-bot/blob/main/resources/ezgif.com-gif-maker.gif)
