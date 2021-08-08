@@ -21,4 +21,6 @@
     - [ ] Tables/reports for mf logs
 - [ ] Infrastructure as Code
     - [ ] Terraform/Cloudformation
-    
+
+## See It in Action
+![mf-bot](https://github.com/bcabraham/discord-sam-jackson-bot/blob/main/resources/ezgif.com-gif-maker.gif)
