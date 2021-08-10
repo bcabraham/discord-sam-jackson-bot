@@ -7,6 +7,8 @@
     - [ ] Uptime
     - [ ] Most frequent mf users
     - [ ] What count?
+- [ ] Lambda Support
+    - [ ] Deploy code to EC2 to help keep highly available
 - [ ] MF Docker
     - [ ] Setup AMI to install Docker instance
     - [ ] Add Docker/Docker-Compose to repo with python image
