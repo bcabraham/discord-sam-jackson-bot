@@ -1,19 +1,14 @@
 import os
-import json
 
 from discord import Client, Message
 from dotenv import load_dotenv
 
+from utils import load_data
+
 client = Client()
 
 # TODO: Move to json file or db
-repl_dict = {}
-
-ROOT_DIR = os.path.abspath(os.curdir)
-data_path = os.path.join(ROOT_DIR, "data.json")
-
-with open(data_path) as data:
-    repl_dict = json.load(data)
+repl_dict = load_data("data.json")
 
 
 def replace_all(text, dic) -> str:
