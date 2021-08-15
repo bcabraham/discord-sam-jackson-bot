@@ -1,5 +1,7 @@
 # discord-sam-jackson-bot
 
+![example workflow](https://github.com/bcabraham/discord-sam-jackson-bot/actions/workflows/python-app.yml/badge.svg)
+
 ## Roadmap
 
 - [ ] Logging the mfs
