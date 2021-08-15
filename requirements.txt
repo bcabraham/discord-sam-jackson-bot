@@ -1,8 +1,8 @@
 # Dev Reqs
-black==20.8b1
-flake8==3.8.4
+black>=20.8b1
+flake8>=3.8.4
 
 # App Reqs
-python-dotenv==0.15.0
-discord.py==1.6.0
-python-daemon==2.3.*
+python-dotenv>=0.15.0
+discord.py>=1.6.0
+python-daemon>=2.3.0
