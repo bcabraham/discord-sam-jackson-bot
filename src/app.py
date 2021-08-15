@@ -9,7 +9,7 @@ client = Client()
 repl_dict = {"!MF": "motherfucker", "!mf": "motherfucking"}
 
 
-def replace_all(text, dic):
+def replace_all(text, dic) -> str:
     for i, j in dic.items():
         text = text.replace(i, j)
     return text
