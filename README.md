@@ -17,7 +17,7 @@
 - [ ] Pipelines
     - [ ] Jenkins
     - [ ] Dev
-        - [ ] Auto-linting and testing on commit
+        - [x] Auto-linting and testing on commit
     - [ ] Production
         - [ ] Once tests pass, pushes new docker image to prod.
 - [ ] Simple website 
