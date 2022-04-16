@@ -1,13 +1,15 @@
 import os
+import random
 
 from discord import Client, Message
 from dotenv import load_dotenv
 
 from utils import load_data
 
+load_dotenv()
+
 client = Client()
 
-# TODO: Move to json file or db
 repl_dict = load_data("data.json")
 
 
@@ -22,7 +24,7 @@ def get_help_message() -> str:
 
     msg = "> Look, motherfucker, here's some motherfuckin help:\n> \n"
     msg += "> Use this\tTo motherfucking get this\n> "
-    msg += "> ".join(commands)
+    msg += ":\t".join(commands)
 
     return msg
 
@@ -41,7 +43,7 @@ async def on_message(message: Message):
 
     if message_lower == "!mf help":
         await message.reply(get_help_message())
-    elif "what" in message_lower:
+    elif "what" in message_lower and random.random() < 0.333:
         await message.reply("Say what again, motherfucker!")
     elif "!mf" in message_lower:
         reply_message = replace_all(message.content, repl_dict)
@@ -49,8 +51,6 @@ async def on_message(message: Message):
 
 
 def main(client):
-    load_dotenv()
-
     client.run(os.getenv("DISCORD_API_TOKEN"))
 
 
