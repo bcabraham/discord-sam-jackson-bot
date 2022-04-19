@@ -36,3 +36,23 @@ jobs:
         pip install pytest
         export PYTHONPATH=src
         pytest
+  
+# deploy:
+    
+#     runs-on: self-hosted
+      
+#     steps:
+#     - name: Stop Docker
+#       run: |
+#       docker stop sambot
+
+#     - name: Cleanup Docker
+#       run: |
+#       docker containers prune
+
+#     - name: Build Image
+#       run: |
+#       docker build . -tag sambot
+
+#     - name: Run Image
+#       docker run sambot
