@@ -17,6 +17,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag sambot:$(date +%s)
+      run: docker build . --file /home/casillserver/actions-runner-sam/sambot/discord-sam-jackson-bot/Dockerfile --tag sambot:$(date +%s)
     - name: Run the Docker image
       run: docker run -d --name sambot:$(date +%s) sambot
