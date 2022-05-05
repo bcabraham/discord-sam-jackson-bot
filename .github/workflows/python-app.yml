@@ -40,8 +40,9 @@ jobs:
   deploy:
     
     runs-on: self-hosted
-      
+
     steps:
+    - uses: docker://python:3
     - name: Stop Docker
       run: |
         docker stop sambot
