@@ -15,45 +15,8 @@ jobs:
     runs-on: self-hosted
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: 3.9
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install flake8 pytest
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
-    - name: Lint with flake8
-      run: |
-        # stop the build if there are Python syntax errors or undefined names
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
-        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-    - name: Test with pytest
-      run: |
-        pip install pytest
-        export PYTHONPATH=src
-        pytest
-  
-  deploy:
-    
-    runs-on: self-hosted
-
-    steps:
-    - uses: docker://python:3
-    - name: Stop Docker
-      run: |
-        docker stop sambot
-
-    - name: Cleanup Docker
-      run: |
-        docker containers prune
-
-    - name: Build Image
-      run: |
-        docker build . -tag sambot
-
-    - name: Run Image
-        docker run sambot
+    - uses: actions/checkout@v3
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag sambot:$(date +%s)
+    - name: Run the Docker image
+      run: docker run -d --name sambot:$(date +%s) sambot
